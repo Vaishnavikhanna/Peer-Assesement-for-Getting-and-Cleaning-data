@@ -2,21 +2,21 @@
 #The run_analysis.R is the script to get a tidy data set.
 
 #reading the train and test data sets
-#setwd("test")
-#testx<-read.table("X_test.txt")
-#testy<-read.table("y_test.txt")
-#tests<-read.table("subject_test.txt")
-#setwd("../")
-#setwd("train")
-#trainx<-read.table("X_train.txt")
-#trainy<-read.table("y_train.txt")
-#trains<-read.table("subject_train.txt")
+setwd("test")
+testx<-read.table("X_test.txt")
+testy<-read.table("y_test.txt")
+tests<-read.table("subject_test.txt")
+setwd("../")
+setwd("train")
+trainx<-read.table("X_train.txt")
+trainy<-read.table("y_train.txt")
+trains<-read.table("subject_train.txt")
 
 #reading the names from features.txt
-#setwd("../")
-#names<-read.table("features.txt")
+setwd("../")
+names<-read.table("features.txt")
 
-Binding the train and test datasets for x,y and subjects. 
+#Binding the train and test datasets for x,y and subjects. 
 datax<-rbind(trainx,testx)
 names(datax)<-names[,2]
 datas<-rbind(trains,tests)
